@@ -92,3 +92,40 @@ function changeLight() {
     }
 
 }
+
+// section 4
+
+const buttonPlus = document.getElementById('buttonPlus')
+const buttonMinus = document.getElementById('buttonMinus')
+const buttonMultiply = document.getElementById('buttonMultiply')
+const buttonDevide = document.getElementById('buttonDevide')
+
+const inputOne = document.getElementById('numberOne')
+const inputTwo = document.getElementById('numberTwo')
+
+function makeOperation(operationCode) {
+    let number1 = Number(inputOne.value)
+    let number2 = Number(inputTwo.value)
+
+    if (operationCode === '+') {
+        var result = number1 + number2;
+    } else if (operationCode === '-') {
+        var result = number1 - number2;
+    } else if (operationCode === '*') {
+        var result = number1 * number2;
+    } else if (operationCode === '/') {
+        var result = number1 / number2;
+    }
+    window.alert(result)
+}
+
+function onOperationButtonClick(eventObject) {
+    var clickElement = eventObject.currentTarget
+    var operation = clickElement.innerHTML
+    makeOperation(operation)
+}
+
+buttonPlus.addEventListener('click', onOperationButtonClick)
+buttonMinus.addEventListener('click', onOperationButtonClick)
+buttonMultiply.addEventListener('click', onOperationButtonClick)
+buttonDevide.addEventListener('click', onOperationButtonClick)
