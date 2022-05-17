@@ -94,14 +94,18 @@ function changeLight() {
 }
 
 // section 4
-
-const buttonPlus = document.getElementById('buttonPlus')
-const buttonMinus = document.getElementById('buttonMinus')
-const buttonMultiply = document.getElementById('buttonMultiply')
-const buttonDevide = document.getElementById('buttonDevide')
-
 const inputOne = document.getElementById('numberOne')
 const inputTwo = document.getElementById('numberTwo')
+
+
+// const buttonPlus = document.getElementById('buttonPlus')
+// const buttonMinus = document.getElementById('buttonMinus')
+// const buttonMultiply = document.getElementById('buttonMultiply')
+// const buttonDevide = document.getElementById('buttonDevide')
+//  >>>>>>>>>>>>>>>>>
+// const operationsButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDevide]
+// >>>>>>>>>>>>>>>>>>
+const operationsButtons = document.getElementsByClassName('operation-button')
 
 function makeOperation(operationCode) {
     let number1 = Number(inputOne.value)
@@ -124,8 +128,6 @@ function operationButtonClick(eventObject) {
     var operation = clickElement.innerHTML
     makeOperation(operation)
 }
-
-const operationsButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDevide]
 
 for (let i = 0; i < operationsButtons.length; i++) {
     operationsButtons[i].addEventListener('click', operationButtonClick)
