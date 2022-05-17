@@ -119,13 +119,14 @@ function makeOperation(operationCode) {
     window.alert(result)
 }
 
-function onOperationButtonClick(eventObject) {
+function operationButtonClick(eventObject) {
     var clickElement = eventObject.currentTarget
     var operation = clickElement.innerHTML
     makeOperation(operation)
 }
 
-buttonPlus.addEventListener('click', onOperationButtonClick)
-buttonMinus.addEventListener('click', onOperationButtonClick)
-buttonMultiply.addEventListener('click', onOperationButtonClick)
-buttonDevide.addEventListener('click', onOperationButtonClick)
+const operationsButtons = [buttonPlus, buttonMinus, buttonMultiply, buttonDevide]
+
+for (let i = 0; i < operationsButtons.length; i++) {
+    operationsButtons[i].addEventListener('click', operationButtonClick)
+}
