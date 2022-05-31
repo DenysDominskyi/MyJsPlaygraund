@@ -110,7 +110,7 @@ const operationsButtons = document.getElementsByClassName('operation-button')
 function makeOperation(operationCode) {
     let number1 = Number(inputOne.value)
     let number2 = Number(inputTwo.value)
-
+    
     if (operationCode === '+') {
         var result = number1 + number2;
     } else if (operationCode === '-') {
@@ -131,4 +131,49 @@ function operationButtonClick(eventObject) {
 
 for (let i = 0; i < operationsButtons.length; i++) {
     operationsButtons[i].addEventListener('click', operationButtonClick)
+}
+
+
+// section 5
+
+// find elements
+const showPrevBtn = document.getElementById('show-prev')
+const showNextBtn = document.getElementById('show-next')
+const firstSliderImg = document.getElementById('first-slider-img')
+
+
+// create img array
+let imagesUrls = [
+    'first-slider/1.jpg',
+    'first-slider/2.jpg'
+]
+imagesUrls.push('first-slider/3.jpg', 'first-slider/4.jpg')
+
+let currentImgIndex = 0
+firstSliderImg.src = imagesUrls[currentImgIndex]
+
+// subscribe to events
+showPrevBtn.addEventListener('click', onShowPrevClick)
+showPrevBtn.disabled = true
+showNextBtn.addEventListener('click', onShowNextClick)
+
+// function definitions
+function onShowPrevClick() {
+    showNextBtn.disabled = false
+    if (currentImgIndex > 0) {
+        currentImgIndex--
+        firstSliderImg.src = imagesUrls[currentImgIndex]
+    }
+    if (currentImgIndex === 0) {
+        showPrevBtn.disabled = true
+    }
+}
+
+function onShowNextClick() {
+    showPrevBtn.disabled = false
+    currentImgIndex++        
+    firstSliderImg.src = imagesUrls[currentImgIndex]
+    if (currentImgIndex === (imagesUrls.length - 1)) {
+        showNextBtn.disabled = true
+    }
 }
