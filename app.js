@@ -135,5 +135,6 @@ for (let i = 0; i < operationsButtons.length; i++) {
 
 
 // section 5
+const sliderObject1 = sliderFactory.createNewSlider()
 
-sliderObject.initSlider()
+sliderObject1.initSlider('slider-1')
