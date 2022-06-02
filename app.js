@@ -29,7 +29,8 @@ theFirst(cityEl)
 theFirst(cityEl)
 
 // section 5
-const sliderObject1 = sliderFactory.createNewSlider()
+const sliderObject1 = new Slider()
+
 
 sliderObject1.initSlider('slider-1')
 
