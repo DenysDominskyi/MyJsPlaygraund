@@ -1,3 +1,10 @@
+    *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+    
+    
     .changes {
         display: flex;
     }
@@ -143,7 +150,31 @@
         height: 400px;
         border-radius: 20px;
     }
-
+    
     .redred{
         background: red;
+    }
+
+    /* section6 ===========================*/
+    .new-page{
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 30px 0;
+        background-color: #2c3e50;
+        height: 130px;
+    }
+
+    .new-page a{
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        color: wheat;
+        background-color: hsla(8, 76%, 57%, 0.545);
+        box-shadow: 0 0 10px #e5543e,
+                    0 0 20px #ffa79a,
+                    0 0 30px #e5543e,
+                    0 0 40px #e5543e,
+                    0 0 50px #e5543e;
     }

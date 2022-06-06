@@ -6,11 +6,12 @@ function Dog(name) {
 let dog1 = new Dog('Altai')
 let dog2 = new Dog('Sirko')
 
-dog2.voice()
-dog1.voice()
+// dog2.voice()
+// dog1.voice()
 
 // Object car
-function Car(name) {
+class Car {
+    constructor(name){
     this.name = name
     this.isTurnOn = false
     this.speed = 0
@@ -18,19 +19,28 @@ function Car(name) {
         v: 2.7,
         horsePower: 300,
         isTurnOn:false
+        }
     }
+    start () {
+            this.isTurnOn = true
+            this.speed = 80
+            this.engine.isTurnOn = true
+            console.log(this.name, " ", this.speed)
+    }
+
 }
 
-Car.prototype.start = function () {
-        this.isTurnOn = true
-        this.speed = 80
-        this.engine.isTurnOn = true
-        console.log(this.name, " ", this.speed)
-}
+// Car.prototype.start = function () {
+//         this.isTurnOn = true
+//         this.speed = 80
+//         this.engine.isTurnOn = true
+//         console.log(this.name, " ", this.speed)
+// }
 
 let reno = new Car('reno')
-console.log(reno.engine.isTurnOn)
-reno.start()
+// console.log(reno.engine.isTurnOn)
+// reno.start()
+// console.log(reno.engine.isTurnOn)
 let mers = new Car('mers')
-console.log(mers.engine.isTurnOn)
-reno.start()
+// console.log(mers.engine.isTurnOn)
+// reno.start()
