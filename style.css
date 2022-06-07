@@ -156,25 +156,60 @@
     }
 
     /* section6 ===========================*/
-    .new-page{
+    .new-page,
+    .page-6{
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
         margin: 30px 0;
-        background-color: #2c3e50;
         height: 130px;
     }
 
+    .page-6{
+        background-color: #2c503e;
+    }
+
+    .page-6 a{
+        padding: 10px;
+        border-radius: 10px;
+        text-decoration: none;
+        transition: .4s;
+        color: rgb(233, 245, 244);
+        background-color: hsla(168, 76%, 57%, 0.545);
+        box-shadow: 0 0 10px hsla(168, 76%, 57%, 0.8);
+    }
+
+    .page-6 a:hover{
+        background-color: hsl(168, 76%, 57%);
+        box-shadow: 0 0 10px hsla(168, 76%, 57%, 0.8),
+        0 0 20px hsla(168, 76%, 57%, 0.5),
+        0 0 30px hsla(168, 76%, 57%, 0.6),
+        0 0 40px hsla(168, 76%, 57%, 0.7),
+        0 0 50px hsla(168, 76%, 57%, 0.8);
+    }
+
+
+
+    .new-page{
+        background-color: #2c3e50;
+    }
+    
     .new-page a{
         padding: 10px;
         border-radius: 10px;
         text-decoration: none;
-        color: wheat;
+        transition: .4s;
+        color: rgb(249, 231, 197);
         background-color: hsla(8, 76%, 57%, 0.545);
-        box-shadow: 0 0 10px #e5543e,
-                    0 0 20px #ffa79a,
-                    0 0 30px #e5543e,
-                    0 0 40px #e5543e,
-                    0 0 50px #e5543e;
+        box-shadow: 0 0 10px hsla(8, 76%, 57%, 0.8);
+    }
+    
+    .new-page a:hover{
+        background-color: hsl(8, 84%, 54%);
+        box-shadow: 0 0 10px hsla(10, 100%, 57%, 0.9),
+        0 0 20px hsla(8, 100%, 57%, 0.6),
+        0 0 30px hsla(8, 100%, 57%, 0.7),
+        0 0 40px hsla(8, 100%, 57%, 0.8),
+        0 0 50px hsla(8, 100%, 57%, 0.9);
     }
