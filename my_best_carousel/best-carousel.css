@@ -2,7 +2,7 @@
     position: relative;
     height: 600px;
     width: 80%;
-    margin: 0 auto;
+    margin: 40px auto;
 }
 
 .carousel__image{
@@ -16,6 +16,8 @@
     height: 100%;
     position: relative;
     overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 30px hsl(0, 0%, 16%);
 }
 
 .carousel__track{
@@ -40,11 +42,19 @@
     cursor: pointer;
 }
 
-.carousel__button--left{}
-.carousel__button--right{}
+.carousel__button--left{
+    position: absolute;
+    top: -5px;
+    left: 0;
+}
+.carousel__button--right{
+    position: absolute;
+    top: -5px;
+    right: 0;
+}
 
 .carousel__button img{
-    width: 15px;
+    width: 40px;
 }
 
 .carousel__nav{
@@ -69,4 +79,12 @@
 
 .is-hidden{
     display: none;
+}
+
+.bottom__nav{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    width: 30%;
+    margin: 5px auto;
 }

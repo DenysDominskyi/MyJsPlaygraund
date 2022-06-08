@@ -4,6 +4,10 @@
         box-sizing: border-box;
     }
     
+    a{
+        text-decoration: none;
+        color: inherit;
+    }
     
     .changes {
         display: flex;
@@ -157,12 +161,13 @@
 
     /* section6 ===========================*/
     .new-page,
-    .page-6{
+    .page-6,
+    .dom__html{
         position: relative;
         display: flex;
         justify-content: center;
         align-items: center;
-        margin: 30px 0;
+        margin: 0;
         height: 130px;
     }
 
@@ -173,7 +178,6 @@
     .page-6 a{
         padding: 10px;
         border-radius: 10px;
-        text-decoration: none;
         transition: .4s;
         color: rgb(233, 245, 244);
         background-color: hsla(168, 76%, 57%, 0.545);
@@ -189,8 +193,6 @@
         0 0 50px hsla(168, 76%, 57%, 0.8);
     }
 
-
-
     .new-page{
         background-color: #2c3e50;
     }
@@ -198,7 +200,6 @@
     .new-page a{
         padding: 10px;
         border-radius: 10px;
-        text-decoration: none;
         transition: .4s;
         color: rgb(249, 231, 197);
         background-color: hsla(8, 76%, 57%, 0.545);
@@ -212,4 +213,40 @@
         0 0 30px hsla(8, 100%, 57%, 0.7),
         0 0 40px hsla(8, 100%, 57%, 0.8),
         0 0 50px hsla(8, 100%, 57%, 0.9);
+    }
+
+    .dom__html{
+        background: linear-gradient(90deg, #0F2027, #203A43, #2C5364);
+        box-shadow: inset 0 0 10px hsla(168, 76%, 57%, 0.8);
+        animation: changeColor 1.5s ease-in infinite alternate;
+    }
+    @keyframes changeColor{
+        0%{
+            color: rgb(233, 245, 244);
+            text-shadow: 0 0 10px hsla(0, 0%, 100%, 1),
+                    0 0 20px hsl(0, 0%, 100%, 0.7),
+                    0 0 30px hsl(0, 0%, 100%, 0.8),
+                    0 0 40px hsl(0, 0%, 100%, 0.9),
+                    0 0 50px hsl(0, 0%, 100%, 1);
+        }
+        100%{
+            color: hsl(184, 100%, 50%);
+            text-shadow: 0 0 10px hsla(184, 100%, 50%, 1),
+                    0 0 20px hsla(184, 100%, 50%, 1),
+                    0 0 30px hsla(184, 100%, 50%, 1),
+                    0 0 40px hsla(184, 100%, 50%, 0.9),
+                    0 0 50px hsla(184, 100%, 50%, 1);
+        }
+    }
+    .dom__html a{
+        transition: .3s;
+    }
+    .dom__html a:hover {
+        color: hsl(217, 100%, 17%);
+        text-shadow: 0 0 10px hsla(184, 100%, 50%, 1),
+                0 0 20px hsla(184, 100%, 50%, 0.7),
+                0 0 30px hsla(184, 100%, 50%, 0.8),
+                0 0 40px hsla(184, 100%, 50%, 0.9),
+                0 0 50px hsla(184, 100%, 50%, 1);
+        font-size: 15px;
     }
