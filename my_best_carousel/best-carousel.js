@@ -72,13 +72,14 @@ nextButton.addEventListener('click', e => {
 dotsNav.addEventListener('click', e => {
     // what indicator was clicked on?
     const targetDot = e.target.closest('button')
-
     if (!targetDot) return;
 
     const currentSlide = track.querySelector('.current-slide');
     const currentDot = dotsNav.querySelector('.current-slide');
     const targetIndex = dots.findIndex(dot => dot === targetDot);
     const targetSlide = slides[targetIndex];
+
+console.log(targetDot)
 
     moveToSlide(track, currentSlide, targetSlide);
     updatesDots(currentDot, targetDot);
