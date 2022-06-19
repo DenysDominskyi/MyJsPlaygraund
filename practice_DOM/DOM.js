@@ -174,6 +174,10 @@ cardBox.addEventListener('click', e => {
 
 })
 
+function setEenableDisableScroll() {
+    document.body.style.overflow = 'hidden'
+}
+
 function showCard(number) {
     if (number < 0) {
         return undefined
@@ -187,8 +191,12 @@ function showCard(number) {
     const closeButton = document.querySelector('.closeBtn')
     closeButton.addEventListener('click', removeDiv)
     showCard.addEventListener('click', removeDiv)
+    setEenableDisableScroll()
+
+
     function removeDiv() {
         showCard.remove()
+        document.body.style.overflow = 'scroll'
     }
 
     if (number === 0) {
@@ -320,6 +328,5 @@ function showCard(number) {
                             All it takes is the desire, knowledge, and skill.</p>
                             </div>`
         )
-        
     }
 }

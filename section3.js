@@ -29,3 +29,24 @@ function changeLight() {
     }
 
 }
+
+// 3.2
+
+const sectionThreeTwo = document.querySelector('.section3-2')
+const circlesArray = Array.from(sectionThreeTwo.children)
+
+for (let i = 0; i < circlesArray.length; i++){
+    circlesArray[i].addEventListener('click', e => {
+        const clickedCircle = e.target.closest('div')
+        const circleIndex = circlesArray.findIndex(circle => circle === clickedCircle)
+        console.log(circleIndex)
+        circlesArray[circleIndex].classList.toggle('active')
+        findActiveCircle()
+    })
+}
+
+function findActiveCircle() {
+    const activeCircle = document.querySelector('.circle.active')
+    console.log(activeCircle)
+}
+
