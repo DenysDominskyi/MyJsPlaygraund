@@ -10,33 +10,83 @@
 </head>
 
 <body>
-    <section>
-        <input value="Den" class="first-name blue" id="firstName">
-        <input value="Dominskyi" class="second-name blue" id="secondName">
-        <input value="UA" class="hello-message blue" id="country">
-        <select id="city">
-            <option>Kiev</option>
-            <option selected='selected'>London</option>
-            <option>Berlin</option>
-        </select>
-        <br>
+    <!-- section 1-2 -->
+    <section class="section1-2 section">
+        <div class="form">
+            <form action="#" id="form" class="form-body">
+                <h1 class="form-title">Send on email</h1>
 
-    </section>
+                <div class="form-item">
+                    <label for="formName" class="form-label">Name*:</label>
+                    <input id="formName" type="text" name="name" class="form-input _req">
+                </div>
 
-    <!-- section 2 -->
-    <section>
-        <div class="section2">
-            <input id="one" value="Name">
-            <input id="two" value="Last Name">
-            <input id="three" value="City">
-            <button id="button">Send</button>
+                <div class="form-item">
+                    <label for="formEmail" class="form-label">E-mail*:</label>
+                    <input id="formEmail" type="email" name="email" class="form-input _req _email">
+                </div>
+
+                <div class="form-item">
+                    <div class="form-label">What better</div>
+                    <div class="options">
+                        <div class="options-item">
+                            <input id="formBitcoin" checked type="radio" value="bitcoin" name="crypto" class="options-input">
+                            <label for="formBitcoin" class="options-label"><span>Bitcoin</span></label>
+                        </div>
+
+                        <div class="options-item">
+                            <input id="formEtherium" type="radio" value="etherium" name="crypto" class="options-input">
+                            <label for="formEtherium" class="options-label"><span>Etherium</span></label>
+                        </div>
+
+                        <div class="options-item">
+                            <input id="formCardano" type="radio" value="cardano" name="crypto" class="options-input">
+                            <label for="formCardano" class="options-label"><span>Cardano</span></label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <label for="formMessage" class="form-label">Message:</label>
+                    <textarea name="message" id="forMessage" class="form-input"></textarea>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-label">Age:</div>
+                    <select name="age" class="select">
+                        <option value="from 18 to 25" selected>Молод</option>
+                        <option value="from 25 to 45">Стар</option>
+                        <option value="from 45">Супер стар</option>
+                    </select>
+                </div>
+
+                <div class="form-item">
+                    <div class="form-label">Add photo</div>
+                    <div class="file">
+                        <div class="file-item">
+                            <input id="formImage" accept=".jpg, .png, .gif" type="file" name="image" class="file-input">
+                            <div class="file-button">Choose</div>
+                        </div>
+                        <div id="formPreview" class="file-preview"></div>
+                    </div>
+                </div>
+
+                <div class="form-item">
+                    <div class="checkbox">
+                        <input id="formAgreement" checked type="checkbox" name="agreement" class="checkbox-input">
+                        <label for="formAgreement" class="checkbox-label _req">I agree with usage polisy</label>
+                    </div>
+                </div>
+
+                <button type="submit" class="form-button">Send</button>
+
+            </form>
         </div>
-        
     </section>
 
     <!-- section 3 -->
-    <section>
-        <div class="section3">
+    <section class="section3">
+        <div class="section3-1">
             <div class="trafic-lights">
                 <div class="circle red active-red" id="red"></div>
                 <div class="circle yellow" id="yellow"></div>
@@ -99,20 +149,19 @@
     </div>
 
     <!-- section 8 -->
-    <div>
+    <section class="section8 section">
         <a href="/cool_JS/contecstThis.html">COOL JS</a>
-    </div>
+    </section>
     <!-- section 9 -->
-    <div>
+    <section class="section9 section">
         <a href="/drag&drop/dragDrop.html">DRAG & DROP</a>
-    </div>
+    </section>
 
 
 
 <!-- ========= S C R I P T ========= -->
     <script src="/Slider.js"></script>
-    <script src="/app.js"></script>
-    <script src="/section2.js"></script>
+    <script src="/section1-2.js"></script>
     <script src="/section3.js"></script>
     <script src="/section4-calculator.js"></script>
     <script src="/section6.js"></script>
