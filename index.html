@@ -10,6 +10,43 @@
 </head>
 
 <body>
+    <!-- CLOCK -->
+    <section class="clock">
+        <div id="time">
+
+            <div class="time-circle" style="--clr:#ff2970;">
+                <div class="dots hr-dot"></div>
+                <svg>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50" id="hh"></circle>
+                </svg>
+                <div id="hours">00</div>
+            </div>
+
+            <div class="time-circle" style="--clr:#fee800;">
+                <div class="dots min-dot"></div>
+                <svg>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50" id="mm"></circle>
+                </svg>
+                <div id="minutes">00</div>
+            </div>
+
+            <div class="time-circle" style="--clr:#04fc43;">
+                <div class="dots sec-dot"></div>
+                <svg>
+                    <circle cx="50" cy="50" r="50"></circle>
+                    <circle cx="50" cy="50" r="50" id="ss"></circle>
+                </svg>
+                <div id="seconds">00</div>
+            </div>
+            
+            <div class="ap">
+                <div id="ampm">AM</div>
+            </div>
+        </div>
+    </section>
+
     <!-- section 1-2 -->
     <section class="section1-2 section">
         
@@ -185,6 +222,7 @@
 
 <!-- ========= S C R I P T ========= -->
     <script src="/Slider.js"></script>
+    <script src="/clock.js"></script>
     <script src="/section1-2.js"></script>
     <script src="/section3.js"></script>
     <script src="/section4-calculator.js"></script>
